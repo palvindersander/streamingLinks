@@ -1,4 +1,4 @@
-# use pip install imdbpy
+#pip install imdbpy
 import imdb
 import webbrowser
 
@@ -46,7 +46,10 @@ def genLink(title):
     return link
     
 def genLinkTV(media):
-    seasonsData(media)
+    try:
+        seasonsData(media)
+    except:
+        print("error occurred getting some data")
     a = input("\nseason: ")
     b = input("episode: ")
     print()
