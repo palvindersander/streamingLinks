@@ -1,3 +1,4 @@
+# use pip install imdbpy
 import imdb
 import webbrowser
 
