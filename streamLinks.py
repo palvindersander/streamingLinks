@@ -54,8 +54,10 @@ def genLinkTV(media):
 def genLinkMovie(media):
     return "https://vidsrc.me/embed/" + getStreamCode(media) + "/"
 
-show = input("show name: ")
-print()
-link = genLink(show)
-webbrowser.open(link, new=2)
-input()
+while True:
+    show = input("\n show name: ")
+    print()
+    if show == "ext":
+        break
+    link = genLink(show)
+    webbrowser.open(link, new=2)
