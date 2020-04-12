@@ -57,11 +57,14 @@ def genLinkMovie(media):
     return "https://vidsrc.me/embed/" + getStreamCode(media) + "/"
 
 while True:
-    show = input("\nshow name: ")
+    media = input("\nmedia name: ")
     print()
-    if show == "ext":
-        break
-    link = genLink(show)
-    webbrowser.open(link, new=2)
+    if media == "ext":
+        exit()
+    try:
+        link = genLink(media)
+        webbrowser.open(link, new=2)
+    except:
+        print("error occured or media not found")
 
 input()
