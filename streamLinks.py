@@ -41,6 +41,7 @@ def genLink(title):
         link = genLinkMovie(media)
     else: 
         return
+    print(link)
     return link
     
 def genLinkTV(media):
@@ -52,12 +53,15 @@ def genLinkTV(media):
     return "https://vidsrc.me/embed/" + getStreamCode(media) + "/" +  a + "-" + b + "/"
     
 def genLinkMovie(media):
+    print(media["title"])
     return "https://vidsrc.me/embed/" + getStreamCode(media) + "/"
 
 while True:
-    show = input("\n show name: ")
+    show = input("\nshow name: ")
     print()
     if show == "ext":
         break
     link = genLink(show)
     webbrowser.open(link, new=2)
+
+input()
